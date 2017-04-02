@@ -7,8 +7,24 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link href="~/CSS/Style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    <div id="container">
+<header>
+  <h1>Greeting.. Wheelie Up!</h1></header>
+		<div id="titleBar">
+		  <h2>DESIGN WHEELS</h2>
+		</div>
+	<!--end of titleBar -->
+    
+	<nav id="topNav">
+    <a href="Default.aspx">Home</a> 
+    <a href="a">How To Order</a> 
+    <a href="a">Product</a>
+    <a href="a">Login</a>
+    <a href="Contact.aspx">Contact</a></nav>
+
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -16,5 +32,20 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+        <footer>
+<nav id="scoialmedia">
+  <a href="https://www.youtube.com/"><img src="Icon/1490622673_YouTube-01.png" width="45" height="45" alt="Youtube Icon "></a>
+  <a href="https://www.facebook.com/"><img src="Icon/1490622683_Facebook-01.png" width="45" height="45" alt="Facebook Icon"></a>
+  <a href="https://www.whatsapp.com/"><img src="Icon/1490622692_WhatsApp-01.png" width="45" height="45" alt="Whatsapp Icon"></a>
+  <a href="https://www.instagram.com/"><img src="Icon/1490622709_Instagram-01.png" width="45" height="45" alt="Instagram Icon"></a>
+</nav>
+<nav id="bottomNav"><a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
+                    <a href="https://jigsaw.w3.org/css-validator/">Validate CSS</a>
+                    <a href="http://achecker.ca/checker/?uri=referer">Check WCAG</a>
+                    <a href="a">ADMINISTRATION</a>
+</nav>
+<div id="copyright" ><p>Copyright ©2017 WHEELIE UP, All Rights Reserved</p></div>
+</footer>
+</div><!-- end of container -->
 </body>
 </html>

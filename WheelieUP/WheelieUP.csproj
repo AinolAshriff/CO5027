@@ -76,10 +76,39 @@
     <Content Include="WheelieUP.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contact.aspx" />
+    <Content Include="CSS\Style.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Icon\1490622673_YouTube-01.png" />
+    <Content Include="Icon\1490622683_Facebook-01.png" />
+    <Content Include="Icon\1490622692_WhatsApp-01.png" />
+    <Content Include="Icon\1490622709_Instagram-01.png" />
+    <Content Include="JS\map.js" />
+    <Content Include="Photo\BBS LM.jpg" />
+    <Content Include="Photo\ENKEI RPF1.jpg" />
+    <Content Include="Photo\logorim.jpg" />
+    <Content Include="Photo\RC350.jpg" />
+    <Content Include="Photo\VOLK CE28N.jpg" />
+    <Content Include="Photo\VOLK TE37.jpg" />
+    <Content Include="Photo\WORK MEISTER S13P.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
