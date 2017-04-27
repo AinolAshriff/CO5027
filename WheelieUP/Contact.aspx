@@ -4,17 +4,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="main">
     <div id="innerMain">
-   	  <div id="contentContact"><form>
-  First name:<br>
-  <input type="text" name="firstname"><br>
-  Last name:<br>
-  <input type="text" name="lastname"><br>
-   Email Address:<br>
-  <input type="text" name="Emailaddress"><br>
-  Message:<br>
-  <input type="text" name="Message"><br>
-   <input type="submit" value="Submit">
-</form></div>
+   	  <div id="contentContact">
+    <label for="firstname">First name</label>
+  <asp:textbox runat="server" id="txtFstName" placeholder="Enter First Name" Width="273px"></asp:textbox><br />
+    
+    <label for="lastname">Last name</label>
+  <asp:textbox runat="server" id="txtLstName" placeholder="Enter Last Name" Width="275px"></asp:textbox><br />
+    
+    <label for="Emailaddress">Email Address</label>
+  <asp:textbox runat="server" id="Txtemail" placeholder="Enter Email here" Width="252px"></asp:textbox><br />
+ 
+    <label for="Message">Message</label>
+  <asp:textbox runat="server" id="txtMessage" placeholder="Enter your Message" Height="58px" Width="285px"></asp:textbox><br />
+    <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
+             <asp:Literal ID="litResult" runat="server"></asp:Literal>
+        </div>
 <!-- end of contentContact -->
 
     	<div id="contentSideContact">

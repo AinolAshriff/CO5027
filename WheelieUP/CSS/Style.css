@@ -22,7 +22,6 @@ h2 {
 }
 
 #container {
-	height: 768px;
 	width: 1024px;
 	margin-right: auto;
 	margin-left: auto;
@@ -83,21 +82,67 @@ header {
 	width: 1024px;
 }
 
-#main #contentOne {
-	height: 376px;
-	width: 700px;
+#contentOne {
+	width: 1017px;
 	float: left;
-	padding-top: 72px;
-	padding-left: 72px;
+    margin-bottom:20px;
+    height: 441px;
 }
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 170px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 21%;
+    height: 241px;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .instock_rim {
 	display: inline-block;
 	width: 150px;
 	float: left;
-	margin-left: 5px;
-	height: 100px;
-	margin-bottom: 10px;
-
+    margin-left:20px;
+	margin-top:30px;
 }
 #contentSideContact {
 	float: right;
@@ -106,12 +151,12 @@ header {
 }
 
 #contentContact {
-	height: 200px;
-	width: 500px;
+	height: 174px;
+	width: 557px;
 	float: left;
 }
 
-#main #contentTwo {
+#contentTwo {
 	height: 376px;
 	width: 252px;
 	float: inherit;
