@@ -20,8 +20,8 @@
     
 	<nav id="topNav">
     <a href="Default.aspx">Home</a> 
-    <a>How To Order</a> 
-    <a>Product</a>
+    <a href="Order.aspx">How To Order</a> 
+    <a href="Product.aspx">Product</a>
     <a>Login</a>
     <a href="Contact.aspx">Contact</a></nav>
 

@@ -83,7 +83,7 @@ header {
 }
 
 #contentOne {
-	width: 1024px;
+	width: 700px;
 	float: left;
     margin-bottom:20px;
     height: 441px;
@@ -105,7 +105,7 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
-    height: 27px;
+    height: 50px;
 }
 
 * {
@@ -116,10 +116,10 @@ div.desc {
     padding: 0 6px;
     float: left;
     width: 21%;
-    height: 240px;
+    height: 262px;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 500px){
     .responsive {
         width: 49.99999%;
         margin: 6px 0;
