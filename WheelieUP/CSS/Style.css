@@ -29,7 +29,7 @@ h2 {
 
 header {
 	height: 95px;
-	width: 989px;
+	width: 1024px;
 	color: #FFF;
 	background-color: #666;
 	padding-top: 35px;
@@ -47,7 +47,7 @@ header {
 }
 #topNav {
 	height: 40px;
-	width: 1009px;
+	width: 1024px;
 	padding-top: 5px;
 	padding-left: 15px;
 	background-color: #FFF;
@@ -83,7 +83,7 @@ header {
 }
 
 #contentOne {
-	width: 1017px;
+	width: 1024px;
 	float: left;
     margin-bottom:20px;
     height: 441px;
@@ -105,6 +105,7 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
+    height: 27px;
 }
 
 * {
@@ -115,7 +116,7 @@ div.desc {
     padding: 0 6px;
     float: left;
     width: 21%;
-    height: 241px;
+    height: 240px;
 }
 
 @media only screen and (max-width: 700px){

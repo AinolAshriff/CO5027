@@ -8,38 +8,46 @@
             <h2> PRODUCT </h2>
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img_fjords.jpg">
-      <img src="img_fjords.jpg" alt="Trolltunga Norway">
+    <a target="_blank" href="VOLK ZE40 BLUE.jpg">
+      <img src="/Photo/VOLK ZE40 BLUE.jpg" alt="VOLK ZE40 BLUE COLOR">
     </a>
-    <div class="desc">Add a description of the image here</div>
+    <div class="desc">VOLK RAYS ZE40 BLUE COLOR </div>
+       <div class="desc">18INCH ET38 9.5JJ 10JJ </div>
+      <div class="desc">$2800 </div>
   </div>
 </div>
 
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-      <img src="img_forest.jpg" alt="Forest" width="300" height="200">
+    <a target="_blank" href="ENKEI RS05RR.jpg">
+      <img src="/Photo/ENKEI RS05RR 1.jpg" alt="ENKEI RS05RR BLACK COLOR" width="300" height="200">
     </a>
-    <div class="desc">Add a description of the image here</div>
+    <div class="desc">ENKEI RS05RR BLACK COLOR</div>
+       <div class="desc">18INCH ET35 8.5JJ 8.5JJ </div>
+      <div class="desc">$3200 </div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img_lights.jpg">
-      <img src="img_lights.jpg" alt="Northern Lights" width="300" height="200">
+    <a target="_blank" href="ENKEI RS05RR.jpg">
+      <img src="/Photo/ENKEI RS05RR 3.jpg" alt="ENKEI RS05RR BRONZE COLOR" width="300" height="200">
     </a>
-    <div class="desc">Add a description of the image here</div>
+    <div class="desc">ENKEI RS05RR BRONZE COLOR</div>
+      <div class="desc">18INCH ET35 8.5JJ 8.5JJ </div>
+      <div class="desc">$3200 </div>
   </div>
 </div>
 
 <div class="responsive">
   <div class="gallery">
-    <a target="_blank" href="img_mountains.jpg">
-      <img src="img_mountains.jpg" alt="Mountains" width="300" height="200">
+    <a target="_blank" href="XXR 530 BLACK.jpg">
+      <img src="/Photo/XXR 530 BLACK.jpg" alt="XXR 530 BLACK COLOR" width="300" height="200">
     </a>
-    <div class="desc">Add a description of the image here</div>
+    <div class="desc">XXR 530 BLACK COLOR</div>
+      <div class="desc">18INCH ET42 8JJ 8JJ </div>
+      <div class="desc">$2000 </div>
   </div>
 </div>
 
