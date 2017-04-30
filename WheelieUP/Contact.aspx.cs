@@ -27,7 +27,7 @@ namespace WheelieUP
             smtpClient.Port = 587;
 
             System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("ainolashriff@gmail.com", "07135809");
-            msg.Subject = "Name" + txtFstName.Text + txtLstName.Text;
+            msg.Subject = "Name" + txtName.Text;
             msg.Body = txtMessage.Text + " " + txtMessage.Text;
 
             smtpClient.Credentials = credentials;
