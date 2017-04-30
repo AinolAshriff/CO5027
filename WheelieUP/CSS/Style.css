@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("Exo_Regular/stylesheet.css");
+
 
 
 body {
@@ -8,12 +8,6 @@ body {
 	line-height: 1.5em;
 	color:#333333;
 	
-}
-
-h1 {
-	font-family: "Exo Regular";
-	margin: 0px;
-	font-size: 4.5em;
 }
 
 h2 {
@@ -73,7 +67,7 @@ header {
 
 
 #main {
-	height: 448px;
+	height: 443px;
 	width: 1024px;
 }
 #innerMain {
@@ -86,7 +80,7 @@ header {
 	width: 700px;
 	float: left;
     margin-bottom:20px;
-    height: 441px;
+    height: 440px;
 }
 
 div.gallery {
@@ -116,7 +110,7 @@ div.desc {
     padding: 0 6px;
     float: left;
     width: 21%;
-    height: 262px;
+    height: 265px;
 }
 
 @media only screen and (max-width: 500px){
@@ -152,15 +146,15 @@ div.desc {
 }
 
 #contentContact {
-	height: 174px;
+	height: 170px;
 	width: 557px;
 	float: left;
 }
 
 #contentTwo {
-	height: 376px;
-	width: 252px;
-	float: inherit;
+	height: 365px;
+	width: 277px;
+	float: right;
 	padding-top: 72px;
 	overflow: hidden;
 	background-color: #666;
@@ -198,7 +192,7 @@ footer #bottomNav a{
 	margin-right: 15px;
 	padding-top: 10px;
 }
-footer #bottomNav a: hover {
+footer #bottomNav a {
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	border-bottom-color: #000000;

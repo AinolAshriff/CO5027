@@ -19,30 +19,28 @@ namespace WheelieUP
         protected void Submit_Click(object sender, EventArgs e)
         {
             SmtpClient smtpClient = new SmtpClient();
+
+            MailMessage msg = new MailMessage(Txtemail.Text, "ainolashriff@gmail.com");
+
             smtpClient.EnableSsl = true;
-            smtpClient.UseDefaultCredentials = false;
             smtpClient.Host = "smtp.gmail.com";
             smtpClient.Port = 587;
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("ainol.lcb@gmail.com", "P@$$word1");
+
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("ainolashriff@gmail.com", "07135809");
+            msg.Subject = "Name" + txtFstName.Text + txtLstName.Text;
+            msg.Body = txtMessage.Text + " " + txtMessage.Text;
 
             smtpClient.Credentials = credentials;
-
-            MailMessage msg = new MailMessage(Txtemail.Text, "ainol.lcb@gmail.com"); 
-            msg.Subject = "Name" + txtFstName.Text + txtLstName.Text;
-            msg.Body = txtMessage.Text;
-            smtpClient.Send(msg);
 
             try
             {
                 smtpClient.Send(msg);
-                litResult.Text =
-                    "<p>Success, mail sent using SMTP with secure connection and credentials </p>";
+                litResult.Text ="<p>Success, mail sent using SMTP with secure connection and credentials </p>";
             }
             catch(Exception ex)
             {
                 //display the full error to the user 
-                litResult.Text =
-                    "<p>Send failed: " + ex.Message + ":" + ex.InnerException + "</p>";
+                litResult.Text ="<p>Send failed: " + ex.Message + ":" + ex.InnerException + "</p>";
             }
         }
     }

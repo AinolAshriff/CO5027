@@ -1,28 +1,30 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WheelieUP.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WheelieUP.Contact" %>
+﻿<%@ Page Title="Contact.aspx" Language="C#" MasterPageFile="~/WheelieUP.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WheelieUP.Contact" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="main">
     <div id="innerMain">
    	  <div id="contentContact">
-    <label for="firstname">First name</label>
-  <asp:textbox runat="server" id="txtFstName" placeholder="Enter First Name" Width="273px"></asp:textbox><br />
-    
-    <label for="lastname">Last name</label>
-  <asp:textbox runat="server" id="txtLstName" placeholder="Enter Last Name" Width="275px"></asp:textbox><br />
-    
-    <label for="Emailaddress">Email Address</label>
-  <asp:textbox runat="server" id="Txtemail" placeholder="Enter Email here" Width="252px"></asp:textbox><br />
- 
-    <label for="Message">Message</label>
-  <asp:textbox runat="server" id="txtMessage" placeholder="Enter your Message" Height="58px" Width="285px"></asp:textbox><br />
+    <asp:label runat="server" id="lblName" Font-Bold="true">Name:</asp:label><br /> 
+  <asp:textbox runat="server" placeholder="Enter Name" ID="txtName" Width="250px"></asp:textbox>
+          <asp:RequiredFieldValidator ID="rfvname" runat="server" ErrorMessage="Please enter name"></asp:RequiredFieldValidator>
+          <br />
+                
+     <asp:label runat="server" id="lblEmlAdd" Font-Bold="true">Email Address:</asp:label><br /> 
+  <asp:textbox runat="server" placeholder="Enter Email Address" ID="Txtemail" Width="250px"></asp:textbox>
+          <asp:RequiredFieldValidator ID="rfvemail" runat="server" ErrorMessage="Please enter email"></asp:RequiredFieldValidator>
+          <br />
+
+     <asp:label runat="server" id="lblMessage" Font-Bold="true">Message:</asp:label><br /> 
+  <asp:textbox runat="server" placeholder="Enter Message" ID="txtMessage" Width="250px"></asp:textbox>
+
+          <br />
     <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
              <asp:Literal ID="litResult" runat="server"></asp:Literal>
         </div>
 <!-- end of contentContact -->
 
     	<div id="contentSideContact">
-    	  <h2>&nbsp;</h2>
     	  <h2>Any Question?</h2>
              <p> Try reaching us by filling up the form, we will try to respond on your query as soon as possible</p> 
     	</div>
