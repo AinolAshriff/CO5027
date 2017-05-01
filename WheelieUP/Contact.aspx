@@ -5,19 +5,24 @@
     <div id="main">
     <div id="innerMain">
    	  <div id="contentContact">
-    <asp:label runat="server" id="lblName" Font-Bold="true">Name:</asp:label><br /> 
-  <asp:textbox runat="server" placeholder="Enter Name" ID="txtName" Width="250px"></asp:textbox>
-          <asp:RequiredFieldValidator ID="rfvname" runat="server" ErrorMessage="Please enter name"></asp:RequiredFieldValidator>
-          <br />
+    <asp:label runat="server" id="lblFstName" Font-Bold="true">First Name:</asp:label><br /> 
+  <asp:textbox runat="server" placeholder="Enter First Name" ID="txtFstName" Width="250px"></asp:textbox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFstName" ErrorMessage="Enter First Name"></asp:RequiredFieldValidator>
+             <br />
+        
+    <asp:label runat="server" id="lblLstName" Font-Bold="true">Last Name:</asp:label><br /> 
+  <asp:textbox runat="server" placeholder="Enter Last Name" ID="txtLstName" Width="250px"></asp:textbox>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtLstName" ErrorMessage="Enter Last Name"></asp:RequiredFieldValidator>
+          <br /> 
                 
      <asp:label runat="server" id="lblEmlAdd" Font-Bold="true">Email Address:</asp:label><br /> 
   <asp:textbox runat="server" placeholder="Enter Email Address" ID="Txtemail" Width="250px"></asp:textbox>
-          <asp:RequiredFieldValidator ID="rfvemail" runat="server" ErrorMessage="Please enter email"></asp:RequiredFieldValidator>
-          <br />
-
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Email Address" ControlToValidate="Txtemail"></asp:RequiredFieldValidator>
+             <br />
+        
      <asp:label runat="server" id="lblMessage" Font-Bold="true">Message:</asp:label><br /> 
   <asp:textbox runat="server" placeholder="Enter Message" ID="txtMessage" Width="250px"></asp:textbox>
-
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter Message" ControlToValidate="txtMessage"></asp:RequiredFieldValidator>
           <br />
     <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
              <asp:Literal ID="litResult" runat="server"></asp:Literal>

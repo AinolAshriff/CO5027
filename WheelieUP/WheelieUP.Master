@@ -40,7 +40,7 @@
   <a href="https://www.instagram.com/"><img src="Icon/1490622709_Instagram-01.png" width="45" height="45" alt="Instagram Icon"></a>
 </nav>
 <nav id="bottomNav"><a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
-                    <a href="https://jigsaw.w3.org/css-validator/">Validate CSS</a>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
                     <a href="http://achecker.ca/checker/?uri=referer">Check WCAG</a>
                     <a href="a">ADMINISTRATION</a>
 </nav>
