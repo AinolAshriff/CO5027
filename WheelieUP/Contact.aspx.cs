@@ -19,18 +19,18 @@ namespace WheelieUP
         protected void Submit_Click(object sender, EventArgs e)
         {
             SmtpClient smtpClient = new SmtpClient();
-
-            MailMessage msg = new MailMessage(Txtemail.Text, "ainolashriff@gmail.com");
-
             smtpClient.EnableSsl = true;
+            smtpClient.UseDefaultCredentials = false;
             smtpClient.Host = "smtp.gmail.com";
             smtpClient.Port = 587;
-
             System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("ainolashriff@gmail.com", "07135809");
-            msg.Subject = "Name" + txtFstName.Text + txtLstName.Text;
-            msg.Body = txtMessage.Text + " " + txtMessage.Text;
 
             smtpClient.Credentials = credentials;
+
+            MailMessage msg = new MailMessage(Txtemail.Text, "ainolashriff@gmail.com");
+            msg.Subject = "Name" + txtFstName.Text + txtLstName.Text;
+            msg.Body = txtMessage.Text + " " + txtMessage.Text;
+            smtpClient.Send(msg);
 
             try
             {
