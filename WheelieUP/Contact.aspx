@@ -1,23 +1,24 @@
-﻿<%@ Page Title="Contact.aspx" Language="C#" MasterPageFile="~/WheelieUP.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WheelieUP.Contact" %>
+﻿<%@ Page Title="Contact.aspx" Language="C#" MasterPageFile="~/WheelieUP.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WheelieUP.Contact" EnableEventValidation ="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="main">
     <div id="innerMain">
    	  <div id="contentContact">
-    <asp:label runat="server" id="lblFstName" Font-Bold="true">First Name:</asp:label><br /> 
-  <asp:textbox runat="server" placeholder="Enter First Name" ID="txtFstName" Width="250px"></asp:textbox>
-             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFstName" ErrorMessage="Enter First Name"></asp:RequiredFieldValidator>
+    <asp:label runat="server" id="lblName" Font-Bold="True">Name:</asp:label><br /> 
+  <asp:textbox runat="server" placeholder="Enter Name" ID="txtName" Width="250px"></asp:textbox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Enter Name"></asp:RequiredFieldValidator>
              <br />
         
-    <asp:label runat="server" id="lblLstName" Font-Bold="true">Last Name:</asp:label><br /> 
-  <asp:textbox runat="server" placeholder="Enter Last Name" ID="txtLstName" Width="250px"></asp:textbox>
-          <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtLstName" ErrorMessage="Enter Last Name"></asp:RequiredFieldValidator>
-          <br /> 
+    <asp:label runat="server" id="lblEml" Font-Bold="true">Email Address:</asp:label><br /> 
+  <asp:textbox runat="server" placeholder="Enter Email Address" ID="txtEmail" Width="250px"></asp:textbox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter Email Address" ControlToValidate="Txtemail"></asp:RequiredFieldValidator>
+             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="Txtemail" ErrorMessage="Invalid Email Address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+             <br />
                 
-     <asp:label runat="server" id="lblEmlAdd" Font-Bold="true">Email Address:</asp:label><br /> 
-  <asp:textbox runat="server" placeholder="Enter Email Address" ID="Txtemail" Width="250px"></asp:textbox>
-             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Email Address" ControlToValidate="Txtemail"></asp:RequiredFieldValidator>
+     <asp:label runat="server" Font-Bold="True" ID="lblSbjct">Subject:</asp:label><br /> 
+  <asp:textbox runat="server" placeholder="Enter Subject" ID="txtsubject" Width="250px"></asp:textbox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Subject Here" ControlToValidate="txtsubject"></asp:RequiredFieldValidator>
              <br />
         
      <asp:label runat="server" id="lblMessage" Font-Bold="true">Message:</asp:label><br /> 

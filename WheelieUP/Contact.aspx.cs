@@ -23,13 +23,14 @@ namespace WheelieUP
             smtpClient.UseDefaultCredentials = false;
             smtpClient.Host = "smtp.gmail.com";
             smtpClient.Port = 587;
-            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("ainolashriff@gmail.com", "07135809");
+
+            System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("upwheelie@gmail.com", "07135809");
 
             smtpClient.Credentials = credentials;
 
-            MailMessage msg = new MailMessage(Txtemail.Text, "ainolashriff@gmail.com");
-            msg.Subject = "Name" + txtFstName.Text + txtLstName.Text;
-            msg.Body = txtMessage.Text + " " + txtMessage.Text;
+            MailMessage msg = new MailMessage(txtEmail.Text, "upwheelie@gmail.com");
+            msg.Subject ="Subject: " + txtsubject.Text;
+            msg.Body = txtMessage.Text;
             smtpClient.Send(msg);
 
             try

@@ -13,22 +13,22 @@ namespace WheelieUP {
     public partial class Contact {
         
         /// <summary>
-        /// lblFstName control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFstName;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// txtFstName control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFstName;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -40,22 +40,22 @@ namespace WheelieUP {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// lblLstName control.
+        /// lblEml control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLstName;
+        protected global::System.Web.UI.WebControls.Label lblEml;
         
         /// <summary>
-        /// txtLstName control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLstName;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -67,22 +67,31 @@ namespace WheelieUP {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
-        /// lblEmlAdd control.
+        /// RegularExpressionValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmlAdd;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
         
         /// <summary>
-        /// Txtemail control.
+        /// lblSbjct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtemail;
+        protected global::System.Web.UI.WebControls.Label lblSbjct;
+        
+        /// <summary>
+        /// txtsubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsubject;
         
         /// <summary>
         /// RequiredFieldValidator2 control.
