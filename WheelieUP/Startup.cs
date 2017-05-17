@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Microsoft.Owin;
-using Owin;
-using Microsoft.Owin.Security.Cookies;
 using Microsoft.AspNet.Identity;
+using Microsoft.Owin;
+using Microsoft.Owin.Security.Cookies;
+using Owin;
 
-[assembly: OwinStartup(typeof(WheelieUP.Startup1))]
+[assembly: OwinStartup(typeof(WheelieUP.Startup))]
 
 namespace WheelieUP
 {
-    public class Startup1
+    public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
@@ -17,7 +17,7 @@ namespace WheelieUP
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/Login.aspx")
+                LoginPath = new PathString("/Login")
             });
         }
     }

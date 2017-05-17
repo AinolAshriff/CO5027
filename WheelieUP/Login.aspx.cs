@@ -4,7 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+
 
 
 namespace WheelieUP
@@ -13,31 +16,66 @@ namespace WheelieUP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                    LoginStatus.Visible = true;
+                    LogoutButton.Visible = true;
+                }
+                else
+                {
+                    LoginForm.Visible = true;
+                }
+            }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SignIn(object sender, EventArgs e)
         {
-            var identityDbContext = new IdentityDbContext("IdentityConnectionString");
-            var userStore = new UserStore<IdentityUser>(identityDbContext);
+            var userStore = new UserStore<IdentityUser>();
             var userManager = new UserManager<IdentityUser>(userStore);
-            var user = userManager.Find(txtLoginEmail.Text, txtLoginPassword.Text);
+            var user = userManager.Find(UserName.Text, Password.Text);
+
             if (user != null)
             {
-                //todo: log user in / instruct user to log in
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+
+                authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
+                Response.Redirect("~/Login.aspx");
             }
             else
             {
-                LitLoginError.Text = "Invalid username or password.";
+                StatusText.Text = "Invalid username or password.";
+                LoginStatus.Visible = true;
             }
         }
 
-        private void LogUserIn(UserManager<IdentityUser> usermanager, IdentityUser user)
+        protected void SignOut(object sender, EventArgs e)
         {
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-            var userIdentity = usermanager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
-            authenticationManager.SignIn(new AuthenticationProperties(), userIdentity);
-            //Note: user is automatically redirected if trying to access another page
+            authenticationManager.SignOut();
+            Response.Redirect("~/Login.aspx");
         }
+
+        protected void CreateUser_Click(object sender, EventArgs e)
+        {
+            // Default UserStore constructor uses the default connection string named: DefaultConnection
+            var userStore = new UserStore<IdentityUser>();
+            var manager = new UserManager<IdentityUser>(userStore);
+
+            var user = new IdentityUser() { UserName = UserName.Text };
+            IdentityResult result = manager.Create(user, Password.Text);
+
+            if (result.Succeeded)
+            {
+                StatusMessage.Text = string.Format("User {0} was created successfully!", user.UserName);
+            }
+            else
+            {
+                StatusMessage.Text = result.Errors.FirstOrDefault();
+            }
         }
     }
+}

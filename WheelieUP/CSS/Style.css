@@ -67,14 +67,32 @@ header {
 
 
 #main {
-	height: 443px;
+	height: 550px;
 	width: 1024px;
 }
 #innerMain {
 	background-color: #ffcc00;
-	height: 448px;
+	height: 550px;
 	width: 1024px;
 }
+
+#Repeater { 
+    display: inline-block;
+}
+
+#loginform {
+            height: 202px;
+            width: 450px;
+            float: left;
+            margin-bottom: 10px;
+
+        }
+#registerform {
+         	float: right;
+            height: 280px;
+            width: 450px;
+
+        }
 
 #contentOne {
 	width: 700px;
@@ -152,7 +170,7 @@ div.desc {
 }
 
 #contentTwo {
-	height: 365px;
+	height: 450px;
 	width: 277px;
 	float: right;
 	padding-top: 72px;
@@ -223,7 +241,7 @@ footer #copyright {
         padding: 0;
       }
 #map {
-	height: 220px;
+	height: 300px;
 	width: 1000px;
 	float: left;
 	clear: none;

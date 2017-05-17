@@ -5,6 +5,18 @@
     <div id="main">
     <div id="innerMain">
     	<div id="contentOne">
+            <asp:Repeater ID="Repeater1" runat="server" DataSourceID="rptrProducts">
+                <HeaderTemplate><div></HeaderTemplate>
+                <ItemTemplate>
+                    <div>
+                        <a href="<%# Eval("Id", "Product.aspx?Id={0}") %>"> 
+                        <%#Eval ("Name") %>
+                        </a>
+                    </div>
+                </ItemTemplate>
+                <FooterTemplate></div></FooterTemplate>
+            </asp:Repeater>
+            <asp:SqlDataSource ID="rptrProducts" runat="server" ConnectionString="<%$ ConnectionStrings:db_1525602_co5027_website_dbConnectionString %>" SelectCommand="SELECT * FROM [tblproductmain]"></asp:SqlDataSource>
             <h2> Instock Rims</h2>
     	            <div class="instock_rim">
            	            <a class="image_popup" runat="server" href="~/Photo/BBS_LM.jpg">
